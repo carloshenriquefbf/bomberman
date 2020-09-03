@@ -26,7 +26,7 @@ void fcarta(estrutura mapa[][13],int lbomba,int cbomba,int lpos,int cpos,int ran
 int main(){
 	
 int i,j; 																		//contadores
-int input,input2; 																//input do usu·rio para os switchs
+int input,input2; 																//input do usu√°rio para os switchs
 int quantParede,quantMonstro,quantCarta,posCarta[LIN][COL],quantBomba; 					//quantidade de paredes, monstros e cartas e posicao das cartas
 int t,lpos=1,cpos=1; 																			//random
 char l,letra;
@@ -52,19 +52,19 @@ case 1:
 	t=rand()%5;																	//escolha aleatoria dos 5 mapas iniciais 	
 	switch(t){
     	case 0:
-             arquivo=fopen("MAPA1.txt","r");             
+             arquivo=fopen("Resources\\MAPA1.txt","r");             
              break;   
 		case 1:
-			 arquivo=fopen("MAPA2.txt","r");
+			 arquivo=fopen("Resources\\MAPA2.txt","r");
 			 break;
 		case 2:
-			 arquivo=fopen("MAPA3.txt","r");
+			 arquivo=fopen("Resources\\MAPA3.txt","r");
 			 break;                         
 		case 3:
-			 arquivo=fopen("MAPA4.txt","r");        
+			 arquivo=fopen("Resources\\MAPA4.txt","r");        
 			 break;
 		case 4:
-			 arquivo=fopen("MAPA5.txt","r");
+			 arquivo=fopen("Resources\\MAPA5.txt","r");
 			 break; 
     }  
     
@@ -262,19 +262,19 @@ case 2:			//debug
 t=rand()%3;																	//escolha aleatoria dos 3 mapas iniciais 	
 		switch(t){
     	case 0:
-             arquivo=fopen("MAPA1.txt","r");             
+             arquivo=fopen("Resources\\MAPA1.txt","r");             
              break;   
 		case 1:
-			 arquivo=fopen("MAPA2.txt","r");
+			 arquivo=fopen("Resources\\MAPA2.txt","r");
 			 break;
 		case 2:
-			 arquivo=fopen("MAPA3.txt","r");
+			 arquivo=fopen("Resources\\MAPA3.txt","r");
 			 break;                         
 		case 3:
-			 arquivo=fopen("MAPA4.txt","r");        
+			 arquivo=fopen("Resources\\MAPA4.txt","r");        
 			 break;
 		case 4:
-			 arquivo=fopen("MAPA5.txt","r");
+			 arquivo=fopen("Resources\\MAPA5.txt","r");
 			 break; 
     }
     
@@ -464,7 +464,7 @@ t=rand()%3;																	//escolha aleatoria dos 3 mapas iniciais
 	break;	 
 case 3:  	
 	 //vencedores = por meio de arquivos 
-	 modo3=fopen("vencedores.txt","r");
+	 modo3=fopen("Resources\\vencedores.txt","r");
 	 
 	 if(modo3==NULL){
 	 	printf("ERRO AO ABRIR O ARQUIVO");
@@ -480,7 +480,7 @@ case 3:
 
 case 4: 
     system("cls");
-	printf("\nDesenvolvedores: Arthur Macedo e Carlos Henrique, EMEC\n");	 	
+	printf("\nDesenvolvedor: Carlos Henrique \n");	 	
 	break;
 	
 case 5:
@@ -499,7 +499,7 @@ return 0;
 void fimprimir(estrutura mapa[][13], int quantBomba,int quantMonstro){
       int i,j;
       printf("\t\t\t\t\t\tBOMBERMAN\n\n\n\n\n");
-      for(i=0;i<13;i++)                                                                  //FUN«AO DE IMPRIMIR
+      for(i=0;i<13;i++)                                                                  //FUN√áAO DE IMPRIMIR
     {
     	for(j=0;j<13;j++)
             {
@@ -721,7 +721,7 @@ else if(mapa[lpos2][cpos2].tipo==3 )
   }while(quantMonstro>0);
  if(quantMonstro==0){
  	printf("PARABENS VOCE GANHOU O JOGO!\n DIGITE SEU NOME PARA O HALL DA FAMA:");
- 	modo3=fopen("vencedores.txt","w+");
+ 	modo3=fopen("Resources\\vencedores.txt","w+");
  	if(modo3==NULL){
  		printf("ERRO AO ABRIR O ARQUIVO");
  	}
